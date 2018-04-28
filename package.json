@@ -54,7 +54,10 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "eslint": "eslint --format './node_modules/eslint-friendly-formatter/index.js' ./src/* ",
+    "eslint_html": "eslint --format html ./src/* -o ./dist/eslint/index.html",
+    "eslint_markdown": "eslint --format './node_modules/eslint-formatter-markdown/markdown.js' ./src/*  -o ./dist/eslint/index.md"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -96,7 +99,13 @@
     ],
     "plugins": [
       "transform-decorators-legacy",
-      ["import", { "libraryName": "antd-mobile", "style": "css" }]
+      [
+        "import",
+        {
+          "libraryName": "antd-mobile",
+          "style": "css"
+        }
+      ]
     ]
   },
   "eslintConfig": {
@@ -106,8 +115,23 @@
     "antd-mobile": "^2.1.8",
     "babel-plugin-import": "^1.7.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "eslint": "^4.10.0",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-react": "^7.7.0",
     "less": "^3.0.2",
     "less-loader": "^4.1.0"
   },
-  "proxy": "http://localhost:9093"
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JunningCui/reactBoostrap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JunningCui/reactBoostrap/issues"
+  },
+  "homepage": "https://github.com/JunningCui/reactBoostrap#readme"
 }
